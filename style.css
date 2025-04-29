@@ -1,0 +1,35 @@
+
+.open-sans {
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+}
+
+html {
+    font-family: "Open Sans";
+}
+
+#navigation {
+    position: fixed;
+}
+
+#me {
+    border: 3px black solid;
+    width: 60px;
+    height: 60px;
+
+    margin: 10px;
+
+    /*i fear i might need a nav bar that doesn't suck*/
+
+    font-size: 25px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: opacity 0.3s ease;
+}
