@@ -1,5 +1,4 @@
-
-.open-sans {
+00000000.open-sans {
     font-family: "Open Sans", sans-serif;
     font-optical-sizing: auto;
     font-weight: 100;
@@ -11,7 +10,7 @@
 html {
     font-family: "Open Sans";
 }
-
+00000000000000000000000
 #navigation {
     position: fixed;
 }
@@ -32,4 +31,15 @@ html {
     align-items: center;
 
     transition: opacity 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #c9daf8;
+}
+
+section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 3rem 1rem;
 }
