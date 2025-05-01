@@ -1,8 +1,3 @@
-:root {
-    --my-teal-rgb: 201, 218, 248;
-    --my-salmon-rgb: 250, 128, 114;
-  }
-
 .open-sans {
     font-family: "Open Sans", sans-serif;
     font-optical-sizing: auto;
@@ -12,31 +7,11 @@
       "wdth" 100;
 }
 
-html {
+html, body {
     font-family: "Open Sans";
+    scroll-behavior: auto;
 }
 
-#navigation {
-    position: fixed;
-}
-
-#me {
-    border: 3px black solid;
-    width: 60px;
-    height: 60px;
-
-    margin: 10px;
-
-    /*i fear i might need a nav bar that doesn't suck*/
-
-    font-size: 25px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    transition: opacity 0.3s ease;
-}
 
 section {
     min-height: 100vh;
@@ -44,4 +19,53 @@ section {
     align-items: center;
     padding: 3rem 1rem;
     gap: 100px;
+}
+
+#section2 {
+    p {
+        color: black;
+    }
+    background-color: #f5ffff !important;
+}
+
+#section3 {
+    p {
+        color: black;
+    }
+    background-color: #ffe3e3 !important;
+}
+
+#section4 {
+    p {
+        color: black;
+    }
+    background-color: #f5ffff !important;
+}
+
+#section5 {
+    p {
+        color: black;
+    }
+    background-color: #ffe3e3 !important;
+}
+
+#section6 {
+    p {
+        color: black;
+    }
+    background-color: #f5ffff !important;
+}
+
+#section7 {
+    p {
+        color: black;
+    }
+    background-color: #ffe3e3 !important;
+}
+
+#section8 {
+    p {
+        color: black;
+    }
+    background-color: #f5ffff !important;
 }
