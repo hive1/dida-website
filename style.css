@@ -1,3 +1,8 @@
+:root {
+    --my-teal-rgb: 201, 218, 248;
+    --my-salmon-rgb: 250, 128, 114;
+  }
+
 .open-sans {
     font-family: "Open Sans", sans-serif;
     font-optical-sizing: auto;
@@ -33,13 +38,10 @@ html {
     transition: opacity 0.3s ease;
 }
 
-.nav-link:hover {
-    color: #c9daf8;
-}
-
 section {
     min-height: 100vh;
     display: flex;
     align-items: center;
     padding: 3rem 1rem;
+    gap: 100px;
 }
