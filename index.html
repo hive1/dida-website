@@ -31,17 +31,18 @@
                 <div class="w-100 d-flex justify-content-center">
                     <ul class="navbar-nav d-flex gap-3">
                         <!-- Nav links -->
-                        <li class="nav-item"><a class="nav-link" href="#section1">TL;DR</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#section2">HISTORY</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#section3">THE DECISION</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#section4">ANALYSIS</a></li>
-                        <li clas="nav-item"><a class="nav-link" href="#section5">MOVING FORWARD</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#section3">TL;DR</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#section4">HISTORY</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#section5">THE DECISION</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#section6">ANALYSIS</a></li>
+                        <li clas="nav-item"><a class="nav-link" href="#section8">MOVING FORWARD</a></li>
                     </ul>
                 </div> 
             </div>
         </div>
     </nav>
   
+    <!-- title screen  -->
       <main class="container-fluid p-0">
         <div class="section">
             <section id="section2" class="bs-primary-color text-white">
@@ -56,6 +57,7 @@
             </section>
         </div>
 
+        <!-- tldr -->
         <main class="container-fluid p-0">
             <section id="section3" class="bs-secondary-color text-white">
                 <div class="container">
@@ -68,18 +70,20 @@
                 </div>
             </section>
 
+        <!-- history -->
         <main class="container-fluid p-0">
             <section id="section4" class="bg-primary text-white">
                 <div class="container">
                     <div class="row justify-content-center">
                         <div class="col-md-8 col-lg-6 text-center">
-                            <div class="title   "><span class="material-icons">home</span> Section 4</div>
+                            <div class="title"><span class="material-icons">home</span> Section 4</div>
                             <p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                         </div>
                     </div>
                 </div>
             </section>
 
+        <!-- the decision -->
         <main class="container-fluid p-0">
             <section id="section5" class="bg-primary text-white">
                 <div class="container">
@@ -92,6 +96,7 @@
                 </div>
             </section>
 
+        <!-- analysis -->
         <main class="container-fluid p-0">
             <section id="section6" class="bg-primary text-white">
                 <div class="container">
@@ -104,6 +109,7 @@
                 </div>
             </section>
 
+        <!-- analysis 2 -->
         <main class="container-fluid p-0">
             <section id="section7" class="bg-primary text-white">
                 <div class="container">
@@ -116,6 +122,7 @@
                 </div>
             </section>
 
+        <!-- moving forward -->
         <main class="container-fluid p-0">
             <section id="section8" class="bg-primary text-white">
                 <div class="container">
@@ -129,13 +136,23 @@
             </section>
 
 
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
     <script>
         // use a script tag or an external JS file
         document.addEventListener("DOMContentLoaded", (event) => {
-         gsap.registerPlugin(ScrollTrigger,ScrollToPlugin)
-         // gsap code here!
+            gsap.registerPlugin(ScrollTrigger,ScrollToPlugin)
+            ScrollTrigger.create({
+            trigger: "body",
+            start: "top top",
+            end: "bottom bottom",
+            snap: {
+                snapTo: 1 / (document.querySelectorAll(".section").length - 1), // snaps to each panel
+                duration: 0.5, // smooth snap duration (in seconds)
+                delay: 0.1,    // delay before snap occurs
+                ease: "power1.inOut" // easing function
+            },
+            markers: true 
+            });
         });
     </script>
 </body>
