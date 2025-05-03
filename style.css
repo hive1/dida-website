@@ -7,6 +7,14 @@
       "wdth" 100;
 }
 
+
+.josefin-sans {
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+  }
+
 html, body {
     font-family: "Open Sans";
     scroll-behavior: auto;
@@ -19,13 +27,15 @@ html, body {
     align-items: center;
     padding: 3rem 1rem;
     gap: 100px;
+
+    font-family: "Josefin Sans";
 }
 
 #section2 {
     p {
         color: black;
     }
-    background-color: #f5ffff !important;
+    background-color: #d7f6ff !important;
 }
 
 #section3 {
@@ -68,4 +78,17 @@ html, body {
         color: black;
     }
     background-color: #f5ffff !important;
+}
+
+#section9 {
+    p {
+        color: black;
+    }
+    background-color: #ffe3e3 !important;
+}
+
+.sc_image {
+    opacity: 0;
+    height: 100%;
+    width: 90%;
 }
