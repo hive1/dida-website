@@ -35,7 +35,7 @@ html, body {
     p {
         color: black;
     }
-    background-color: #d7f6ff !important;
+    background-color: #f5ffff !important;
 }
 
 #section3 {
@@ -87,8 +87,9 @@ html, body {
     background-color: #ffe3e3 !important;
 }
 
-.sc_image {
+#sc_image {
     opacity: 0;
     height: 100%;
     width: 90%;
+    y: -50;
 }

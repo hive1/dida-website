@@ -1,0 +1,21 @@
+@import url('style.css');
+
+#title {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    font-family: 'josefin-sans';
+
+
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.left-center-box {
+    margin-left: 20px;
+    padding: 20px;
+    border: 1px solid #000;
+}
