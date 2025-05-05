@@ -7,7 +7,6 @@
       "wdth" 100;
 }
 
-
 .josefin-sans {
     font-family: "Josefin Sans", sans-serif;
     font-optical-sizing: auto;
@@ -29,61 +28,53 @@ html, body {
     gap: 100px;
 
     font-family: "Josefin Sans";
+
+    color: black;
+}
+
+#tldr-body {
+    font-family: "Josefine Sans", sans-serif;
+    font-size: 30px;
+    font-weight: 100;
+    text-align: center;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    width: 300px;
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
 }
 
 #section2 {
-    p {
-        color: black;
-    }
     background-color: #f5ffff !important;
 }
 
 #section3 {
-    p {
-        color: black;
-    }
     background-color: #ffe3e3 !important;
 }
 
 #section4 {
-    p {
-        color: black;
-    }
     background-color: #f5ffff !important;
 }
 
 #section5 {
-    p {
-        color: black;
-    }
     background-color: #ffe3e3 !important;
 }
 
 #section6 {
-    p {
-        color: black;
-    }
     background-color: #f5ffff !important;
 }
 
 #section7 {
-    p {
-        color: black;
-    }
     background-color: #ffe3e3 !important;
 }
 
 #section8 {
-    p {
-        color: black;
-    }
     background-color: #f5ffff !important;
 }
 
 #section9 {
-    p {
-        color: black;
-    }
     background-color: #ffe3e3 !important;
 }
 

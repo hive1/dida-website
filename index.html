@@ -6,12 +6,23 @@
     <title>Citizens United</title>
     <link rel="icon" type="image/x-icon" href="gavel.png">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="text.css">
 
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollToPlugin.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
 
+    <!-- Include jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js" crossorigin="anonymous"></script>
+
+    <!-- Include Textillate.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/textillate/0.4.0/jquery.textillate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.6.1/jquery.lettering.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.compat.min.css"/>
+
+    <!-- typed -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 
     <!-- open sans google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -41,7 +52,6 @@
 
             .navbar-toggler {
                 z-index: 999;
-
             }
 
         </style>
@@ -65,13 +75,13 @@
 
     <!-- title screen  -->
       <main class="container-fluid p-0">
-        <section id="section2" class="section bs-primary-color text-white">
+        <section id="section2" class="section bs-primary-color">
             <div class="container">
                 <div class="row justify-content-center text-center">
                     <div class="col-md-8 col-lg-6">
                         <img src="images/sc_edited.png" alt="Supreme Court" height=600px
                         class="position-absolute bottom-0 start-0 img-fluid" id="sc_edited">
-                    
+                        <p id="title" class="left-center-box">The Effects of the 2010 Citizens United Decision</p>
                     </div>
                 </div>
             </div>
@@ -79,20 +89,22 @@
 
         <!-- tldr -->
         <main class="container-fluid p-0">
-            <section id="section3" class="section bs-secondary-color text-white">
-                <div class="container">
-                    <div class="row justify-content-center">
-                        <div class="col-md-8 col-lg-6 text-center">
-                            <div class="title"><span class="material-icons">home</span> Section 3</div>
-                            <p class="paragraph">TLDR</p>
-                        </div>
+            <section id="section3" class="section">
+                <div class="container-fluid">
+                    <div class="row align-items-start">
+                        <div class="col-5" id="tldr-title"></div>
+                        <div class="col-7" id="tldr-body"><p>To save everyone a bit of time, the result of the Citizens United 
+                            decision is one of the largest blows to the integrity of American democracy in the last decade. 
+                            It removed the already faltering legal restraints on megacorporations acting purely for their own benefit, 
+                            and works in variance with the legal basis it was argued over. 
+                        </p></div>
                     </div>
                 </div>
             </section>
 
         <!-- history -->
         <main class="container-fluid p-0">
-            <section id="section4" class="section bg-primary text-white">
+            <section id="section4" class="section bg-primary">
                 <div class="container">
                     <div class="row justify-content-center">
                         <div class="col-md-8 col-lg-6 text-center">
@@ -172,6 +184,9 @@
     <!-- animation code  -->
     <script src="animation.js"></script>
 
+    <script src="textAnn.js"></script>
+    <!-- <script src="tldrAnn.js"></script> -->
+
     <script>
         // use a script tag or an external JS file
         document.addEventListener("DOMContentLoaded", (event) => {
@@ -190,13 +205,12 @@
             });
 
 
-
             // smooth transitions
             ScrollTrigger.create({
                 trigger: "body",
                 start: "20px top",
                 end: "bottom bottom",
-                toggleActions: "restart none restart none",
+                toggleActions: "play none restart none",
                 snap: {
                     snapTo: 1 / (document.querySelectorAll(".section").length -1), // snaps to each panel
                     duration: 0.5, // smooth snap duration (in seconds)
@@ -209,6 +223,3 @@
     </script>
 </body>
 </html>
-
-<!-- index.html
-Displaying index.html. -->
