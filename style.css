@@ -15,7 +15,6 @@
   }
 
 html, body {
-    font-family: "Open Sans";
     scroll-behavior: auto;
 }
 
@@ -23,48 +22,12 @@ html, body {
 .section {
     min-height: 100vh;
     display: flex;
-    align-items: center;
-    padding: 3rem 1rem;
-    gap: 100px;
-
-    font-family: "Josefin Sans";
 
     color: black;
+    padding-top: 50px;
 }
 
 
-#tldr-title {
-    font-family: "Open Sans", sans-serif;
-    font-size: 80%;
-
-    width: 300px;
-    height: 300px;
-
-    color: black;
-    text-align: center;
-    font-weight: 600;
-}
-
-#tldr-body {
-    font-family: "Josefin Sans", sans-serif;
-    font-size: 30px;
-    font-weight: 100;
-    text-align: center;
-
-    border: 3px solid black;
-    background-color: azure;
-    box-sizing: border-box;
-
-    padding: 1rem; 
-    width: auto; 
-    height: auto;
-
-    margin: 0 auto; 
-    text-align: center; 
-
-    display: inline-block; 
-    border-radius: 10px;
-}
 
 #section2 {
     background-color: #f5ffff !important;

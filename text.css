@@ -3,28 +3,13 @@
 #title {
     color: black;
     
-    margin: 0;
-    padding: 0;
     font-family: "Josefin Sans", sans-serif;
     font-size: 70px;
     font-weight: 300;
-
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-
-    align-items: center;
-    justify-content: flex-start;
-
-    position: absolute;
-    top: 20%;
-    right: 15%;
 }
 
-.left-center-box {
-    margin-left: 20px;
-    padding: 20px;
-
-    height: 300px;
-    width: 400px;
+#tldr-body {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 40px;
+    font-weight: 100;
 }
-
