@@ -92,7 +92,7 @@
             <section id="section3" class="section">
                 <div class="container-fluid">
                     <div class="row align-items-start">
-                        <div class="col-5" id="tldr-title"></div>
+                        <div class="col-5"><span id="tldr-title"></span></div>
                         <div class="col-7" id="tldr-body"><p>To save everyone a bit of time, the result of the Citizens United 
                             decision is one of the largest blows to the integrity of American democracy in the last decade. 
                             It removed the already faltering legal restraints on megacorporations acting purely for their own benefit, 
@@ -182,7 +182,7 @@
             </section>
 
     <!-- animation code  -->
-    <script src="animation.js"></script>
+    <!-- <script src="animation.js"></script> -->
 
     <script src="textAnn.js"></script>
     <!-- <script src="tldrAnn.js"></script> -->
@@ -217,9 +217,41 @@
                     delay: 0.1,    // delay before snap occurs
                     ease: "power1.inOut" // easing function
                 },
-                markers: true 
+                markers: false
                 });
+
+                
+            let typedInstance;
+            ScrollTrigger.create({
+                trigger: "#section3",
+                start: "top 80%",
+                end: "top bottom",
+                onEnter: () => {
+                    console.log('test')
+                    if (typedInstance) {
+                        typedInstance.destroy();
+                    }
+                    
+                    console.log(document.querySelector("#tldr-title"));
+                    typedInstance = new Typed("#tldr-title", {
+                        strings: ['Why should I even care?'],
+                        typeSpeed: 50,
+                        backSpeed: 25,
+                        backDelay: 1000,
+                        loop: false
+                    });
+                    console.log(typeof typedInstance);
+                },
+
+                onLeave: () => {
+                    if (typedInstance) {
+                        typedInstance.destroy();
+                    }
+                }
+            });
         });
+
+
     </script>
 </body>
 </html>
