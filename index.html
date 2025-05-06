@@ -24,6 +24,9 @@
     <!-- typed -->
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 
+    <!-- video api -->
+    <script src="https://www.youtube.com/iframe_api"></script>
+
     <!-- open sans google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -267,11 +270,31 @@
         <!-- video -->
         <main class="container-fluid p-0">
             <section id="section5" class="section bg-primary">
-                <div class="container">
-                    <div class="row justify-content-center">
-                        <div class="col-md-8 col-lg-6 text-center">
-                            <div class="title"><span class="material-icons">home</span>Section 5</div>
-                            <p class="paragraph">video</p>
+                <div class="container position-relative">
+                    <div class="row">
+                        <div class="col-md-9 col-lg-6 text-center">
+                            <div class="card d-flex justify-content-start align-items-center" style="width: 1000px; height: 700px;">
+                                <h5 class="card-title font-italic" id="videoTitle"></h5>
+                                <div id="yt-container">
+                                    <iframe id="yt-video" width="900px" height="600px" 
+                                    src="https://www.youtube.com/embed/BOYcM1z5fTs?enablejsapi=1" 
+                                    title="Hillary, The Movie" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-lg-3 text-center">
+                            <button class="btn dropdown-toggle" type="button" id="citizensUnitedImage" data-toggle="collapse" data-bs-target="#textCollapse">
+                                <img src="images/cu (1).png" alt="Citizens United" height="300px" width="300px" id="citizensUnitedImage">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="card card-body position-absolute bottom-0 end-0 mb-3 me-3">
+                                <div class="card card-body">
+                                    testing
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -410,17 +433,36 @@
                 },
             onLeaveBack: () => gsap.fromTo("#section4 .row", { opacity: 1, rotate: 0 }, { opacity: 0, rotate: -45, duration: 1, ease: "power2.out" })
         });
+    
+        let player;
 
-        ScrollTrigger.create({
-            trigger: "#section5 .row",
-            start: "top 80%",
-            onEnter: () => {
-                gsap.fromTo("#section5 .row", { opacity: 0, scale: 0.5 }, { opacity: 1, scale: 1, duration: 1, ease: "power2.out" });
-
-        },
-            onLeaveBack: () => gsap.fromTo("#section5 .row", { opacity: 1, scale: 1 }, { opacity: 0, scale: 0.5, duration: 1, ease: "power2.out" })
+    function onYouTubeIframeAPIReady() {
+        player = new YT.Player('yt-video', {
+            events: {
+                'onReady': onPlayerReady
+            }
         });
+    }
 
+        function onPlayerReady(event) {
+            ScrollTrigger.create({
+                trigger: "#section5 .row",
+                start: "top 80%",
+                onEnter: () => {
+                    gsap.fromTo("#section5 .row", { opacity: 0, scale: 0.5 }, { opacity: 1, scale: 1, duration: 1, ease: "power2.out" });
+
+                    let typed = new Typed('#videoTitle', {
+                        strings: ["But more simply, it's this"],
+                        typeSpeed: 15,
+                        showCursor: false
+                    });
+
+                    // Play the video when it comes into view
+                    event.target.playVideo();
+                },
+                onLeaveBack: () => gsap.fromTo("#section5 .row", { opacity: 1, scale: 1 }, { opacity: 0, scale: 0.5, duration: 1, ease: "power2.out" })
+            });
+        }
         ScrollTrigger.create({
             trigger: "#section6 .row",
             start: "top 80%",
@@ -455,7 +497,6 @@
             onEnter: () => gsap.fromTo("#section10 .row", { opacity: 0, y: 50, rotate: 20 }, { opacity: 1, y: 0, rotate: 0, duration: 1, ease: "power2.out" }),
             onLeaveBack: () => gsap.fromTo("#section10 .row", { opacity: 1, y: 0, rotate: 0 }, { opacity: 0, y: 50, rotate: 20, duration: 1, ease: "power2.out" })
         });
-
     </script>
 </body>
 </html>

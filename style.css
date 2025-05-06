@@ -102,3 +102,8 @@ html, body {
 .bar-neutral {
     background-color: #bdc3c7;
 }
+
+#citizensUnitedImage {
+    position: relative;
+    right: -65%;
+}
