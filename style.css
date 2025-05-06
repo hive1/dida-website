@@ -16,8 +16,8 @@
 
 html, body {
     scroll-behavior: auto;
+    overflow-x: hidden
 }
-
 
 .section {
     min-height: 100vh;
@@ -26,7 +26,6 @@ html, body {
     color: black;
     padding-top: 50px;
 }
-
 
 
 #section2 {
@@ -39,6 +38,11 @@ html, body {
 
 #section4 {
     background-color: #f5ffff !important;
+    background-image: url("images/hillary_edited.png"),
+                      linear-gradient(rgba(245, 255, 255, 0.7), rgba(245, 255, 255, 0.7));
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
 }
 
 #section5 {
@@ -61,9 +65,40 @@ html, body {
     background-color: #ffe3e3 !important;
 }
 
+#section10 {
+    background-color: #f5ffff !important;
+}
+
 #sc_image {
     opacity: 0;
     height: 100%;
     width: 90%;
     y: -50;
+}
+
+#kennedyImage {
+    opacity: 0;
+    x: -50;
+}
+
+#stevensImage {
+    opacity: 0;
+    x: 50;
+}
+
+.party-bar {
+    width: 4px;
+    border-radius: 2px;
+}
+
+.bar-red {
+    background-color: #e74c3c;
+}
+
+.bar-blue {
+    background-color: #3498db;
+}
+
+.bar-neutral {
+    background-color: #bdc3c7;
 }

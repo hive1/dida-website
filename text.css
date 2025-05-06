@@ -8,8 +8,54 @@
     font-weight: 300;
 }
 
-#tldr-body {
+#section-title {
+    color: black;
+    
     font-family: "Josefin Sans", sans-serif;
-    font-size: 40px;
-    font-weight: 100;
+    font-size: 50px;
+    font-weight: 300;
+
+    text-align: center;
+    justify-content: center;
+}
+
+#general-body {
+    font-family: "Open Sans", sans-serif;
+    font-size: 30px;
+    font-weight: 300;
+}
+
+#typed {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 50px;
+    font-weight: 300;
+
+    text-align: center;
+    justify-content: center;
+}
+
+#historyTyped {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 50px;
+    font-weight: 300;
+
+    text-align: center;
+    justify-content: center;
+}
+
+#historyTitle {
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 400;
+    font-size: 25px;
+
+    text-align: center;
+    justify-content: center;
+
+    padding-top: 10%;
+}
+
+#history-body {
+    font-family: "Open Sans", sans-serif;
+    font-size: 20px;
+    font-weight: 300;
 }

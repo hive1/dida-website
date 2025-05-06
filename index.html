@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Citizens United</title>
-    <link rel="icon" type="image/x-icon" href="gavel.png">
+    <link rel="icon" type="image/x-icon" href="images/gavel.png">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="text.css">
 
@@ -64,9 +64,9 @@
                         <!-- Nav links -->
                         <li class="nav-item"><a class="nav-link" href="#section3">TL;DR</a></li>
                         <li class="nav-item"><a class="nav-link" href="#section4">HISTORY</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#section5">THE DECISION</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#section6">ANALYSIS</a></li>
-                        <li clas="nav-item"><a class="nav-link" href="#section9">MOVING FORWARD</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#section6">THE DECISION</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#section7">ANALYSIS</a></li>
+                        <li clas="nav-item"><a class="nav-link" href="#section10">MOVING FORWARD</a></li>
                     </ul>
                 </div> 
             </div>
@@ -81,7 +81,12 @@
                     <div class="col-md-8 col-lg-6">
                         <!-- <img src="images/sc_edited.png" alt="Supreme Court" height=600px
                         class="position-absolute bottom-0 start-0 img-fluid" id="sc_edited"> -->
-                        <p id="title" class="mt-5">The Effects of the 2010 Citizens United Decision</p>
+                        <p id="title" class="tlt">The Effects of the 2010 Citizens United Decision</p>
+                    </div>
+                    <div class="row justify-content-evenly align-items-center">
+                        <div class="col-4"><img src="images/sc_2(2).png" height="700px" width="1200px"></div>
+                        <!-- <div class="col-4 gx-4"><img src="images/kennedy.png" height="500px" width="700px" id="kennedyImage"></div> -->
+                        <!-- <div class="col-4 gx-4"><img src="images/stevens.png" height="650px" width="500px" id="stevensImage"></div> -->
                     </div>
                 </div>
             </div>
@@ -92,20 +97,125 @@
             <section id="section3" class="section">
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-md-8"></div> <!-- Empty space on the left -->
-                        <div class="col-md-4 ms-auto me-3 align-items-end">
-                            <p id="tldr-body">
-                                To save everyone a bit of time, the result of the Citizens United decision is one of the largest blows to the <br>integrity of American democracy in the last decade. It removed the already faltering legal<br> restraints on 
-                                megacorporations acting purely for their own benefit, and works in 
-                                variance with the legal basis it was argued over.
-                            </p>
+
+                        <!-- why should i even care? -->
+                        <div class="col-md-8">
+                            <div class="row">
+                                <div class="card w-60 m-0 mb-3">
+                                    <div class="card-body">
+                                        <h5 class="card-title" id="typed"></h5>  
+                                        <div class="card-text" id="general-body">
+                                            Citizens United paved the way to developing Political Action Committees, or PACs. These entities served as technically independent funds that were used to heavily assist in campaigns of governmental officials. These PACs are commonly thought to be workarounds to the campaign financing laws already in place, giving corporations greater voices than any one person in the US.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="card w-60 m-0 mb-1">
+                                    <div class="card-body">
+                                        <h5 class="card-title" id="section-title">In Summary</h5>
+                                        <p class="card-text" id="general-body">
+                                            To save everyone a bit of time, the result of the Citizens United decision is one of the largest blows to the integrity of American democracy in the last decade. It removed the already faltering legal restraints on megacorporations acting purely for their own benefit, and works in variance with the legal basis it was argued over. 
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-6">
-                            test
-                        </div>
-                        <div class="test"></div>
+
+                        <!-- table -->
+                        <div class="col-md-4">
+                            <table class="table align-middle table-hover">
+                                <thead class="table-light">
+                                  <tr>
+                                    <th>PAC Name</th>
+                                    <th>Total Amount</th>
+                                    <th>To Democrats</th>
+                                    <th>To Republicans</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr class="table-danger">
+                                    <td>Never Back Down Inc</td>
+                                    <td>$5,250,100</td>
+                                    <td>0.00%</td>
+                                    <td>100.00%</td>
+                                  </tr>
+                                  <tr class="table-secondary">
+                                    <td>National Assn of Realtors</td>
+                                    <td>$4,186,500</td>
+                                    <td>49.01%</td>
+                                    <td>50.60%</td>
+                                  </tr>
+                                  <tr class="table-danger">
+                                    <td>American Israel Public Affairs Cmte</td>
+                                    <td>$3,037,900</td>
+                                    <td>36.62%</td>
+                                    <td>63.02%</td>
+                                  </tr>
+                                  <tr class="table-secondary">
+                                    <td>Blue Cross/Blue Shield</td>
+                                    <td>$2,930,850</td>
+                                    <td>45.76%</td>
+                                    <td>53.34%</td>
+                                  </tr>
+                                  <tr class="table-secondary">
+                                    <td>National Beer Wholesalers Assn</td>
+                                    <td>$2,790,000</td>
+                                    <td>46.90%</td>
+                                    <td>52.74%</td>
+                                  </tr>
+                                  <tr class="table-secondary">
+                                    <td>American Crystal Sugar</td>
+                                    <td>$2,775,000</td>
+                                    <td>54.14%</td>
+                                    <td>45.50%</td>
+                                  </tr>
+                                  <tr class="table-secondary">
+                                    <td>America's Credit Unions</td>
+                                    <td>$2,757,660</td>
+                                    <td>49.81%</td>
+                                    <td>49.75%</td>
+                                  </tr>
+                                  <tr class="table-info">
+                                    <td>Operating Engineers Union</td>
+                                    <td>$2,569,717</td>
+                                    <td>78.19%</td>
+                                    <td>21.18%</td>
+                                  </tr>
+                                  <tr class="table-danger">
+                                    <td>National Auto Dealers Assn</td>
+                                    <td>$2,552,500</td>
+                                    <td>30.85%</td>
+                                    <td>68.93%</td>
+                                  </tr>
+                                  <tr class="table-danger">
+                                    <td>American Bankers Assn</td>
+                                    <td>$2,470,516</td>
+                                    <td>34.17%</td>
+                                    <td>65.23%</td>
+                                  </tr>
+                                  <tr class="table-info">
+                                    <td>Sheet Metal, Air, Rail & Transportation Union</td>
+                                    <td>$2,462,600</td>
+                                    <td>94.42%</td>
+                                    <td>5.06%</td>
+                                  </tr>
+                                  <tr class="table-info">
+                                    <td>Machinists/Aerospace Workers Union</td>
+                                    <td>$2,361,000</td>
+                                    <td>97.20%</td>
+                                    <td>1.31%</td>
+                                  </tr>
+                                  <tr class="table-info">
+                                    <td>American Federation of State/Cnty/Munic Employees</td>
+                                    <td>$2,310,500</td>
+                                    <td>98.49%</td>
+                                    <td>0.43%</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                        </div>                        
                     </div>
                 </div>
             </section>
@@ -114,63 +224,107 @@
         <main class="container-fluid p-0">
             <section id="section4" class="section bg-primary">
                 <div class="container">
-                    <div class="row justify-content-center">
-                        <div class="col-md-8 col-lg-6 text-center">
-                            <div class="title"><span class="material-icons">home</span> Section 4</div>
-                            <p class="paragraph">HISTORY</p>
+                    <div class="row">
+                        <div class="col-md-12 h-120">
+                            <div class="card mb-3">
+                                <h5 class="card-title text-decoration-underline mt-3" id="historyTyped" style="font-style: italic"></h5>
+                                <div class="card-body" id="general-body">
+                                    <p>
+                                        The qualms associated with Citizen United can be traced to popular American distrust in Corporate meddling in our democracy. 
+                                        <br>
+
+                                        For decades, restrictive legislation such as the <a href="https://en.wikipedia.org/wiki/Tillman_Act_of_1907">Tillman Act</a> formed well-respected precedent for quite some time, until a series of legislative and judicial actions created a perfect battleground to breed the eventual court opinion on Citizens United.
+                                        <span style="text-align: center; justify-content: center; display: block;"><br>What led up to this decision?</span>
+                                    </p>
+                                </div>  
+                            </div>
                         </div>
                     </div>
-                </div>
+
+                    <!-- timeline  -->
+                     <div class="row justify-content-evenly align-items-center mb-3">
+                        <div class="col-md-3 bg-danger mx-1">
+                            <div class="card">
+                                <h5 class="card-title" id="historyTitle">Buckley v. Valeo (1976)</h5>
+                                <p class="card-body" id="history-body">A remarkable decision that laid the groundwork for future rulings regarding campaign finances. Upheld limits on contributions from groups outside of candidate himself.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3 bg-info mx-1">
+                            <div class="card">
+                                <h5 class="card-title" id="historyTitle">McCain-Feingold Act (2002)</h5>
+                                <p class="card-body" id="history-body">Sponsored by John McCain (R-AZ) and Russ Feingold (D-WI), this Act sought to limit the rise in soft money in all levels in election. More importantly, it limited political advertisements within certain periods of elections.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3 bg-danger mx-1">
+                            <div class="card">
+                                <h5 class="card-title" id="historyTitle">FEC v. Wisconsin Right to Life, Inc. (2007)</h5>
+                                <p class="card-body" id="history-body">A fundamental case that weakened BCRA provisions. Opened up leeway for appeal of BCRA bans, which became the grounds for which Citizen United was decided.</p>
+                            </div>
+                        </div>
+                     </div>
             </section>
 
-        <!-- the decision -->
+        <!-- video -->
         <main class="container-fluid p-0">
-            <section id="section5" class="section bg-primary text-white">
+            <section id="section5" class="section bg-primary">
                 <div class="container">
                     <div class="row justify-content-center">
                         <div class="col-md-8 col-lg-6 text-center">
-                            <div class="title"><span class="material-icons">home</span> Section 5</div>
-                            <p class="paragraph">DECISION</p>
+                            <div class="title"><span class="material-icons">home</span>Section 5</div>
+                            <p class="paragraph">video</p>
                         </div>
                     </div>
                 </div>
             </section>
 
-        <!-- analysis -->
+        <!-- decision -->
         <main class="container-fluid p-0">
-            <section id="section6" class="section bg-primary text-white">
+            <section id="section6" class="section bg-primary">
                 <div class="container">
                     <div class="row justify-content-center">
                         <div class="col-md-8 col-lg-6 text-center">
                             <div class="title"><span class="material-icons">home</span> Section 6</div>
+                            <p class="paragraph">decision</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        <!-- analysis 1 -->
+        <main class="container-fluid p-0">
+            <section id="section7" class="section bg-primary">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-md-8 col-lg-6 text-center">
+                            <div class="title"><span class="material-icons">home</span> Section 7</div>
                             <p class="paragraph">ANALYSIS 1</p>
                         </div>
                     </div>
                 </div>
             </section>
 
+
         <!-- analysis 2 -->
         <main class="container-fluid p-0">
-            <section id="section7" class="section bg-primary text-white">
+            <section id="section8" class="section bg-primary">
                 <div class="container">
                     <div class="row justify-content-center">
                         <div class="col-md-8 col-lg-6 text-center">
-                            <div class="title"><span class="material-icons">home</span> Section 7</div>
+                            <div class="title"><span class="material-icons">home</span>section 8</div>
                             <p class="paragraph">ANALYSIS 2</p>
                         </div>
                     </div>
                 </div>
             </section>
 
-
         <!-- analysis 3 -->
         <main class="container-fluid p-0">
-            <section id="section8" class="section bg-primary text-white">
+            <section id="section9" class="section section bg-primary">
                 <div class="container">
                     <div class="row justify-content-center">
                         <div class="col-md-8 col-lg-6 text-center">
-                            <div class="title"><span class="material-icons">home</span> Section 7</div>
-                            <p class="paragraph">ANALYSIS 3</p>
+                            <div class="title"><span class="material-icons">home</span> Section 9</div>
+                            <p class="paragraph">MOVING FORWARD</p>
                         </div>
                     </div>
                 </div>
@@ -178,11 +332,11 @@
 
         <!-- moving forward -->
         <main class="container-fluid p-0">
-            <section id="section9" class="section section bg-primary text-white">
+            <section id="section10" class="section section bg-primary">
                 <div class="container">
                     <div class="row justify-content-center">
                         <div class="col-md-8 col-lg-6 text-center">
-                            <div class="title"><span class="material-icons">home</span> Section 8</div>
+                            <div class="title"><span class="material-icons">home</span> Section 10</div>
                             <p class="paragraph">MOVING FORWARD</p>
                         </div>
                     </div>
@@ -190,61 +344,80 @@
             </section>
 
             <!-- Scripts -->
-    <script>
-        gsap.registerPlugin(ScrollTrigger);
+        <script>
+            gsap.registerPlugin(ScrollTrigger);
 
-        // textillate setup
-        let tlt = $('.tlt');
-        tlt.textillate({ in: { effect: 'fadeInDown' },out: { effect: 'fadeOutDown' }, autoStart: false });
+            // textillate setup
+            let tlt = $('.tlt');
+            tlt.textillate({ in: { effect: 'lightSpeedIn' },out: { effect: 'fadeOutDown' }, autoStart: false });
 
-
-        ScrollTrigger.create({
-            trigger: "#section1 .row",
-            start: "top 80%",
-            onEnter: () => {
-                tlt.textillate('in');
-                gsap.fromTo("#section1 .row", { opacity: 0, y: 100 }, { opacity: 1, y: 0, duration: 1, ease: "power2.out" });
-            },
-            onLeave: () => {
-                tlt.textillate('out');
-                gsap.fromTo("#section1 .row", { opacity: 1, y: 0 }, { opacity: 0, y: 100, duration: 1, ease: "power2.out" });
-            },
-            onEnterBack: () => {
-                tlt.textillate('in');
-                gsap.fromTo("#section1 .row", { opacity: 0, y: 100 }, { opacity: 1, y: 0, duration: 1, ease: "power2.out" });
-            },
+            ScrollTrigger.create({
+                trigger: "#section1 .row",
+                start: "top 80%",
+                onEnter: () => {
+                    tlt.textillate('in');
+                    gsap.fromTo("#section1 .row", { opacity: 0, y: 100 }, { opacity: 1, y: 0, duration: 1, ease: "power2.out" });
+                    // gsap.fromTo("#kennedyImage", {opacity: 0, x: -1000}, {opacity: 1, x: -40, duration: 1, ease: "power2.out"});
+                    // gsap.fromTo("#stevensImage", {opacity: 0, x: 50}, {opacity: 1, x: 50, y:-60, duration: 1, ease: "power2.out"});
+                },
+                onLeave: () => {
+                    tlt.textillate('out');
+                    gsap.fromTo("#section1 .row", { opacity: 1, y: 0 }, { opacity: 0, y: 100, duration: 1, ease: "power2.out" });
+                },
+                onEnterBack: () => {
+                    tlt.textillate('in');
+                    gsap.fromTo("#section1 .row", { opacity: 0, y: 100 }, { opacity: 1, y: 0, duration: 1, ease: "power2.out" });
+                },
             onLeaveBack: () => {
                 tlt.textillate('out');
                 gsap.fromTo("#section1 .row", { opacity: 1, y: 0 }, { opacity: 0, y: 100, duration: 1, ease: "power2.out" });
             }
         });
 
-
         ScrollTrigger.create({
             trigger: "#section2 .row",
             start: "top 80%",
-            onEnter: () => gsap.fromTo("#section2 .row", { opacity: 0, y: -100}, { opacity: 1, y: 0, duration: 2, ease: "power2.out" }),
-            onLeaveBack: () => gsap.fromTo("#section2 .row", { opacity: 1, x: 0 }, { opacity: 0, x: -100, duration: 1, ease: "power2.out" })
-        });
+            onEnter: () => 
+                gsap.fromTo("#section2 .row", { opacity: 0, y: -100}, { opacity: 1, y: 0, duration: 2, ease: "power2.out" })
+            });
 
         ScrollTrigger.create({
             trigger: "#section3 .row",
             start: "top 80%",
-            onEnter: () => gsap.fromTo("#section3 .row", { opacity: 0, x: 100 }, { opacity: 1, x: 0, duration: 1, ease: "power2.out" }),
+            onEnter: () => {
+                
+                gsap.fromTo("#section3 .row", { opacity: 0, x: 100 }, { opacity: 1, x: 0, duration: 1, ease: "power2.out" });
+
+                let typed = new Typed('#typed', {
+                    strings: ['But why should I even care?'],
+                    typeSpeed: 30,  
+                    showCursor: false})
+                },
+
             onLeaveBack: () => gsap.fromTo("#section3 .row", { opacity: 1, x: 0 }, { opacity: 0, x: 100, duration: 1, ease: "power2.out" })
         });
 
         ScrollTrigger.create({
             trigger: "#section4 .row",
             start: "top 80%",
-            onEnter: () => gsap.fromTo("#section4 .row", { opacity: 0, rotate: -45 }, { opacity: 1, rotate: 0, duration: 1, ease: "power2.out" }),
+            onEnter: () => {
+                gsap.fromTo("#section4 .row", { opacity: 0, rotate: -45 }, { opacity: 1, rotate: 0, duration: 1, ease: "power2.out" });
+
+                let typed = new Typed('#historyTyped', {
+                    strings: ['When did it all start?'],
+                    typeSpeed: 30,
+                    showCursor: false})
+                },
             onLeaveBack: () => gsap.fromTo("#section4 .row", { opacity: 1, rotate: 0 }, { opacity: 0, rotate: -45, duration: 1, ease: "power2.out" })
         });
 
         ScrollTrigger.create({
             trigger: "#section5 .row",
             start: "top 80%",
-            onEnter: () => gsap.fromTo("#section5 .row", { opacity: 0, scale: 0.5 }, { opacity: 1, scale: 1, duration: 1, ease: "power2.out" }),
+            onEnter: () => {
+                gsap.fromTo("#section5 .row", { opacity: 0, scale: 0.5 }, { opacity: 1, scale: 1, duration: 1, ease: "power2.out" });
+
+        },
             onLeaveBack: () => gsap.fromTo("#section5 .row", { opacity: 1, scale: 1 }, { opacity: 0, scale: 0.5, duration: 1, ease: "power2.out" })
         });
 
@@ -282,8 +455,6 @@
             onEnter: () => gsap.fromTo("#section10 .row", { opacity: 0, y: 50, rotate: 20 }, { opacity: 1, y: 0, rotate: 0, duration: 1, ease: "power2.out" }),
             onLeaveBack: () => gsap.fromTo("#section10 .row", { opacity: 1, y: 0, rotate: 0 }, { opacity: 0, y: 50, rotate: 20, duration: 1, ease: "power2.out" })
         });
-
-    </script>
 
     </script>
 </body>
