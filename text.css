@@ -25,6 +25,12 @@
     font-weight: 300;
 }
 
+#video-explanation-body {
+    font-family: "Open Sans", sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+}
+
 #typed {
     font-family: "Josefin Sans", sans-serif;
     font-size: 50px;
@@ -56,14 +62,11 @@
 
 #videoTitle {
     font-family: "Josefin Sans", sans-serif;
-    font-size: 40px;
+    font-size: 20px;
     font-weight: 300;
-
 
     text-align: center;
     justify-content: center;
-
-    padding: 10px;
 }
 
 

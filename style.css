@@ -107,3 +107,12 @@ html, body {
     position: relative;
     right: -65%;
 }
+
+.card_lower_right {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    width: 70px;
+    height: auto;
+}
