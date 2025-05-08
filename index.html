@@ -272,9 +272,9 @@
             <section id="section5" class="section bg-primary">
                 <div class="row justify-content-center pb-5">
                     <div class="col-7 card">
-                        <h5 class="card-title font-italic p-3 mt-3" id="videoTitle"></h5>
-                        <div id="yt-container" style="padding-right: 3px;">
-                            <iframe id="youtubeVideo" width="800px" height="600px" 
+                        <h5 class="card-title font-italic p-3 mt-3 " id="videoTitle"></h5>
+                        <div id="yt-container" class="text-center">
+                            <iframe id="youtubeVideo" width="800px" height="600px"
                             src="https://www.youtube.com/embed/BOYcM1z5fTs?autoplay=1&mute=1&enablejsapi=1" 
                             title="Hillary, The Movie" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"></iframe>
                         </div>
@@ -295,9 +295,23 @@
         <main class="container-fluid p-0">
             <section id="section6" class="section bg-primary">
                 <div class="container">
-                    <div class="row">
-                        <div class="col-md-10 col-lg-6 border">
-                            <p style="padding: 3px; overflow-wrap: break-word;">DJWIAdjawidWAOIDJWADIAWJDIOWAJDOIWADJIOWAJDIWOAJDOIAWJDIOWAJDIOAWDJWIAODJWAIODJWIAODJAWIODJAWIDJAWIDJAWIODJAWIODJAIODJWAIDJWAIDJAWIODJWAIODJWAIODJAWIDJAWIDWJIO</p>
+                    <class class="row align-items-center justify-content-center my-5">
+                        <h5 id="decision-title"></h5>
+                    </class>
+                    <div class="row align-items-center tight-row">
+                        <div class="col-md-8 col-lg-8">
+                            <p id="decision-body" class="border rounded p-3">The Supreme Court ruled in <span style="color: #b31942">favor</span> of Citizens United in a 5 to 4 decision, in short agreeing that curtailing their ability to distribute the film Hillary is a violation of their first amendment right. In an opinion written by Justice <span style="color: #0A3161">Kennedy</span>, the Court argued that wealth should not be a delimiting factor to someone’s first amendment right. As such, Citizens United allowed for limitless funding for candidates.</p>
+                        </div>
+                        <div class="col-md-4 col-lg-4 d-flex justify-content-center align-items-center">
+                            <img src="images/kennedyAgain (1).png" id="kennedyImage" height="500px" width="400px">
+                        </div>
+                    </div>
+                    <div class="row align-items-center tight-row">
+                        <div class="col-md-4 col-lg-4 d-flex justify-content-center align-items-center">
+                            <img src="images/stevens.png" id="stevensImage" style="height: 500px; width: 400px;">
+                        </div>
+                        <div class="col-md-8 col-lg-8 d-flex justify-content-center align-items-center">
+                            <p id="decision-body" class="border rounded p-3" style="background-image: url('images/fec_edited\ \(1\).png');"><span style="color: #B31942">Justice Stevens</span> wrote a particularly lengthy dissent regarding potentially corrupting nature of this decision. Unlimited spending in political campaigns can lead to expanded influence by corporate entities and mitigation of the influence of any common man.</p>
                         </div>
                     </div>
                 </div>
@@ -461,9 +475,6 @@
                     typeSpeed: 35,
                     showCursor: false
                 });
-                console.log('flag');
-                // Play the video when it comes into view
-                // event.target.playVideo();
             },
             onLeaveBack: () => gsap.fromTo("#section5 .row", { opacity: 1, scale: 1 }, { opacity: 0, scale: 0.5, duration: 1, ease: "power2.out" })
         });
@@ -471,8 +482,21 @@
         ScrollTrigger.create({
             trigger: "#section6 .row",
             start: "top 80%",
-            onEnter: () => gsap.fromTo("#section6 .row", { opacity: 0, skewX: 45 }, { opacity: 1, skewX: 0, duration: 1, ease: "power2.out" }),
-            onLeaveBack: () => gsap.fromTo("#section6 .row", { opacity: 1, skewX: 0 }, { opacity: 0, skewX: 45, duration: 1, ease: "power2.out" })
+            onEnter: () => {
+                gsap.fromTo("#section6 .row", { opacity: 0, y: 100 }, { opacity: 1, y: 0, duration: 1, ease: "power2.out" });
+                gsap.fromTo("#kennedyImage", { opacity: 0, x: 1000}, { opacity: 1, x: 0, duration: 1, ease: "power2.out" });
+
+                console.log('flag');
+
+                let typed = new Typed('#decision-title', {
+                    strings: ["How exactly was this decided?"],
+                    typeSpeed: 35,
+                    showCursor: false
+                });
+
+
+        },
+            onLeaveBack: () => gsap.fromTo("#section6 .row", { opacity: 1, x: 0}, { opacity: 1, x: -50, duration: 1, ease: "power2.out" })
         });
 
         ScrollTrigger.create({

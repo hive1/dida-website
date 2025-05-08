@@ -77,13 +77,7 @@ html, body {
 }
 
 #kennedyImage {
-    opacity: 0;
-    x: -50;
-}
-
-#stevensImage {
-    opacity: 0;
-    x: 50;
+    transform: translateY(-49px);
 }
 
 .party-bar {
@@ -101,9 +95,4 @@ html, body {
 
 .bar-neutral {
     background-color: #bdc3c7;
-}
-
-#citizensUnitedImage {
-    position: relative;
-    right: -65%;
 }

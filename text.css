@@ -46,7 +46,7 @@
 
 #historyTitle {
     font-family: "Josefin Sans", sans-serif;
-    font-weight: 400;
+    font-weight: 300;
     font-size: 25px;
 
     text-align: center;
@@ -57,7 +57,7 @@
 
 #videoTitle {
     font-family: "Josefin Sans", sans-serif;
-    font-size: 40px;
+    font-size: 30px;
     font-weight: 400;
 
     text-align: center;
@@ -70,9 +70,46 @@
     font-weight: 300;
 }
 
-
 #history-body {
     font-family: "Open Sans", sans-serif;
     font-size: 20px;
     font-weight: 300;
+}
+
+#decision-body {
+    font-family: "Open Sans", sans-serif;
+    font-size: 25px;
+    font-weight: 300;
+
+    padding: 3px; 
+    overflow-wrap: break-word;
+
+    background-image: url("images/citizensUnitedAGAIN\ \(2\).png");
+    background-size: 300px 300px;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    background-color: #ffffff;
+
+    transition: all 0.5s;
+}
+
+#decision-body:hover {
+    transform: scale(1.2);
+    transition: all 0.5s;
+}
+
+#decision-title {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 50px;
+    font-weight: 300;
+
+    /* text-align: center;
+    justify-content: center; */
+
+    padding: 10px 20px;
+
+    background-color: #ffffff;
+    border: 1px solid rgb(203, 203, 203);
+
 }
