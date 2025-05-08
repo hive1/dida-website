@@ -33,7 +33,7 @@ html, body {
 }
 
 #section3 {
-    background-color: #ffe3e3 !important;
+    background-color: #f7fcfc !important;
 }
 
 #section4 {
@@ -46,7 +46,7 @@ html, body {
 }
 
 #section5 {
-    background-color: #ffe3e3 !important;
+    background-color: #f7fcfc !important;
 }
 
 #section6 {
@@ -54,7 +54,7 @@ html, body {
 }
 
 #section7 {
-    background-color: #ffe3e3 !important;
+    background-color: #f7fcfc !important;
 }
 
 #section8 {
@@ -62,7 +62,7 @@ html, body {
 }
 
 #section9 {
-    background-color: #ffe3e3 !important;
+    background-color: #f7fcfc !important;
 }
 
 #section10 {
@@ -106,13 +106,4 @@ html, body {
 #citizensUnitedImage {
     position: relative;
     right: -65%;
-}
-
-.card_lower_right {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 1000;
-    width: 70px;
-    height: auto;
 }

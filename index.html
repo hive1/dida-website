@@ -268,38 +268,36 @@
             </section>
 
         <!-- video -->
-        <main class="container-fluid p-0">
+        <main class="container-fluid justify-content-center">
             <section id="section5" class="section bg-primary">
-                <div class="container d-flex align-items-evenly">
-                    <div class="col-md-7 col-lg-6">
-                        <div class="row card" style="width: 1000px; height: 600px;">
-                            <!-- <div id="yt-container">
-                                <iframe id="yt-video" width="800px" height="600px" 
-                                src="https://www.youtube.com/embed/BOYcM1z5fTs?enablejsapi=1" 
-                                title="Hillary, The Movie" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"></iframe>
-                            </div> -->
-                            <div class="col-md-5">
-                                <div class="card">
-                                    <h5 class="card-title font-italic p-3" id="videoTitle"></h5>
-                                    <div class="card-body" id="video-explanation-body" style="overflow: none;">
-                                        <p>The 2010 decision stemmed from a political non-profit referred to as Citizen United creating a defamatory film of Hillary Clinton shortly before the 2008 presidential primary elections. The organization was funded by both small donors and massive corporations, so it became legally liable under a variety of laws. The 1971 Federal Election Campaign Act explicitly made it illegal for corporations to use their treasuries to invest in electioneering communication. Knowing their liability, 
-                                        Citizens United sought injunctive relief and was categorically rejected. Then they brought it to the Supreme Court.</p>
-                                    </div>
-                                </div>
+                <div class="row justify-content-center pb-5">
+                    <div class="col-7 card">
+                        <h5 class="card-title font-italic p-3 mt-3" id="videoTitle"></h5>
+                        <div id="yt-container" style="padding-right: 3px;">
+                            <iframe id="youtubeVideo" width="800px" height="600px" 
+                            src="https://www.youtube.com/embed/BOYcM1z5fTs?autoplay=1&mute=1&enablejsapi=1" 
+                            title="Hillary, The Movie" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                        </div>
+                    </div>
+                    <div class="col-4 d-flex align-items-stretch">
+                        <div class="card w-100">
+                            <div class="card-body" id="video-explanation-body" style="overflow: none;">
+                                <p>The 2010 decision stemmed from a political non-profit referred to as Citizen United creating a defamatory film of Hillary Clinton shortly before the 2008 presidential primary elections. The organization was funded by both small donors and massive corporations, so it became legally liable under a variety of laws. The 1971 Federal Election Campaign Act explicitly made it illegal for corporations to use their treasuries to invest in electioneering communication. Knowing their liability, 
+                                Citizens United sought injunctive relief and was categorically rejected. Then they brought it to the Supreme Court.</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
+        </main>
 
         <!-- decision -->
         <main class="container-fluid p-0">
             <section id="section6" class="section bg-primary">
                 <div class="container">
-                    <div class="row justify-content-center">
-                        <div class="col-md-8 col-lg-6 text-center">
-                            <div class="title"><span class="material-icons">home</span> Section 6</div>
-                            <p class="paragraph">decision</p>
+                    <div class="row">
+                        <div class="col-md-10 col-lg-6 border">
+                            <p style="padding: 3px; overflow-wrap: break-word;">DJWIAdjawidWAOIDJWADIAWJDIOWAJDOIWADJIOWAJDIWOAJDOIAWJDIOWAJDIOAWDJWIAODJWAIODJWIAODJAWIODJAWIDJAWIDJAWIODJAWIODJAIODJWAIDJWAIDJAWIODJWAIODJWAIODJAWIDJAWIDWJIO</p>
                         </div>
                     </div>
                 </div>
@@ -357,6 +355,31 @@
                     </div>
                 </div>
             </section>
+
+        <script>
+                document.addEventListener("DOMContentLoaded", (event) => {
+                    const youtubeVideo = document.getElementById("youtubeVideo");
+                    ScrollTrigger.create({
+                        trigger: ".yt-container",
+                        start: "top center",
+                        end: "bottom center",
+                        onEnter: () => {
+                            youtubeVideo.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
+                        },
+                        onLeave: () => {
+                            youtubeVideo.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+                        },
+                        onEnterBack: () => {
+                            youtubeVideo.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
+                        },
+                        onLeaveBack: () => {
+                            youtubeVideo.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+                        },
+                        
+                    });
+                })
+
+        </script>
 
             <!-- Scripts -->
         <script>
@@ -426,35 +449,25 @@
             onLeaveBack: () => gsap.fromTo("#section4 .row", { opacity: 1, y: 0 }, { opacity: 0, y: 100, duration: 1, ease: "power2.out" })
         });
     
-        let player;
 
-    function onYouTubeIframeAPIReady() {
-        player = new YT.Player('yt-video', {
-            events: {
-                'onReady': onPlayerReady
-            }
+        ScrollTrigger.create({
+            trigger: "#section5 .row",
+            start: "top 80%",
+            onEnter: () => {
+                gsap.fromTo("#section5 .row", { opacity: 0, scale: 0.5 }, { opacity: 1, scale: 1, duration: 1, ease: "power2.out" });
+
+                let typed = new Typed('#videoTitle', {
+                    strings: ["But more simply, it's this"],
+                    typeSpeed: 35,
+                    showCursor: false
+                });
+                console.log('flag');
+                // Play the video when it comes into view
+                // event.target.playVideo();
+            },
+            onLeaveBack: () => gsap.fromTo("#section5 .row", { opacity: 1, scale: 1 }, { opacity: 0, scale: 0.5, duration: 1, ease: "power2.out" })
         });
-    }
 
-        function onPlayerReady(event) {
-            ScrollTrigger.create({
-                trigger: "#section5 .row",
-                start: "top 80%",
-                onEnter: () => {
-                    gsap.fromTo("#section5 .row", { opacity: 0, scale: 0.5 }, { opacity: 1, scale: 1, duration: 1, ease: "power2.out" });
-
-                    let typed = new Typed('#videoTitle', {
-                        strings: ["But more simply, it's this"],
-                        typeSpeed: 15,
-                        showCursor: false
-                    });
-
-                    // Play the video when it comes into view
-                    event.target.playVideo();
-                },
-                onLeaveBack: () => gsap.fromTo("#section5 .row", { opacity: 1, scale: 1 }, { opacity: 0, scale: 0.5, duration: 1, ease: "power2.out" })
-            });
-        }
         ScrollTrigger.create({
             trigger: "#section6 .row",
             start: "top 80%",
