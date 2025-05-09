@@ -22,7 +22,7 @@
 #general-body {
     font-family: "Open Sans", sans-serif;
     font-size: 30px;
-    font-weight: 300;
+    font-weight: 250px;
 }
 
 
@@ -111,5 +111,27 @@
 
     background-color: #ffffff;
     border: 1px solid rgb(203, 203, 203);
+}
 
+#analysis-one-title {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 50px;
+    font-weight: 300;
+
+    padding: 10px 20px;
+
+    background-color: #ffffff;
+    border: 1px solid rgb(203, 203, 203);
+
+    text-align: center;
+}
+
+#analysis-one-body {
+    font-family: "Open Sans", sans-serif;
+    font-size: 25px;
+    font-weight: 250;
+
+    padding: 3px; 
+    overflow-wrap: break-word;
+    background-color: #ffffff;
 }

@@ -21,6 +21,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.6.1/jquery.lettering.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.compat.min.css"/>
 
+    <!-- chart -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
+
     <!-- typed -->
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 
@@ -295,38 +299,45 @@
         <main class="container-fluid p-0">
             <section id="section6" class="section bg-primary">
                 <div class="container">
-                    <div class="row m-0">
-                        <class class="row align-items-center justify-content-center my-3">
-                            <h5 id="decision-title"></h5>
-                        </class>
-                        <div class="row align-items-center tight-row">
-                            <div class="col-md-8 col-lg-8 col-sm-8">
-                                <p id="decision-body" class="border rounded p-3">The Supreme Court ruled in <span style="color: #b31942">favor</span> of Citizens United in a 5 to 4 decision, in short agreeing that curtailing their ability to distribute the film Hillary is a violation of their first amendment right. In an opinion written by Justice <span style="color: #0A3161">Kennedy</span>, the Court argued that wealth should not be a delimiting factor to someone’s first amendment right. As such, Citizens United allowed for limitless funding for candidates.</p>
-                            </div>
-                            <div class="col-md-4 col-lg-4 col-sm-4 d-flex justify-content-center align-items-center">
-                                <img src="images/kennedyAgain (1).png" id="kennedyImage" height="500px" width="400px">
-                            </div>
-                        </div>
-                        <div class="row align-items-center tight-row">
-                            <div class="col-md-4 col-lg-4 col-sm-4 d-flex justify-content-center align-items-center">
-                                <img src="images/stevens.png" id="stevensImage" style="height: 500px; width: 400px;">
-                            </div>
-                            <div class="col-md-8 col-lg-8 d-flex justify-content-center align-items-center">
-                                <p id="decision-body" class="border rounded p-3" style="background-image: url('images/fec_edited\ \(1\).png');"><span style="color: #B31942">Justice Stevens</span> wrote a particularly lengthy dissent regarding potentially corrupting nature of this decision. Unlimited spending in political campaigns can lead to expanded influence by corporate entities and mitigation of the influence of any common man.</p>
-                            </div>
-                        </div>
+                    <class class="row align-items-center justify-content-center my-5">
+                        <h5 id="decision-title"></h5>
                     </class>
+                    <div class="row align-items-center tight-row">
+                        <div class="col-md-8 col-lg-8">
+                            <p id="decision-body" class="border rounded p-3">The Supreme Court ruled in <span style="color: #b31942">favor</span> of Citizens United in a 5 to 4 decision, in short agreeing that curtailing their ability to distribute the film Hillary is a violation of their first amendment right. In an opinion written by Justice <span style="color: #0A3161">Kennedy</span>, the Court argued that wealth should not be a delimiting factor to someone’s first amendment right. As such, Citizens United allowed for limitless funding for candidates.</p>
+                        </div>
+                        <div class="col-md-4 col-lg-4 d-flex justify-content-center align-items-center">
+                            <img src="images/kennedyAgain (1).png" id="kennedyImage" height="500px" width="400px">
+                        </div>
+                    </div>
+                    <div class="row align-items-center tight-row">
+                        <div class="col-md-4 col-lg-4 d-flex justify-content-center align-items-center">
+                            <img src="images/stevens.png" id="stevensImage" style="height: 500px; width: 400px;">
+                        </div>
+                        <div class="col-md-8 col-lg-8 d-flex justify-content-center align-items-center">
+                            <p id="decision-body" class="border rounded p-3" style="background-image: url('images/fec_edited\ \(1\).png');"><span style="color: #B31942">Justice Stevens</span> wrote a particularly lengthy dissent regarding potentially corrupting nature of this decision. Unlimited spending in political campaigns can lead to expanded influence by corporate entities and mitigation of the influence of any common man.</p>
+                        </div>
+                    </div>
                 </div>
             </section>
 
         <!-- analysis 1 -->
+
+        <!-- for this instance, i will track the independent expenditures over time -->
         <main class="container-fluid p-0">
             <section id="section7" class="section bg-primary">
                 <div class="container">
-                    <div class="row justify-content-center">
-                        <div class="col-md-8 col-lg-6 text-center">
-                            <div class="title"><span class="material-icons">home</span> Section 7</div>
-                            <p class="paragraph">ANALYSIS 1</p>
+                    <div class="row">
+                        <h5 id="analysis-one-title"></h5>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 col-lg-4">
+                            <p id="analysis-one-body" class="border rounded p-3">For this project, I’ll be using data from the Federal Election Commission and Open Secrets. The FEC, the defendant of the Citizens United case, has been tracking data of elections expenditures and PAC funding since 1992. Data collected and released from groups such as Open Secrets as well can be processed using the Pandas library.
+                            </p>
+                            
+                        </div>
+                        <div class="col-md-8 col-lg-8">
+                            <canvas id="exp-year"></canvas>
                         </div>
                     </div>
                 </div>
@@ -397,6 +408,62 @@
 
         </script>
 
+
+        <script>
+            const ctx = document.getElementById('exp-year');
+            // let years;
+            // let expend;
+
+            // fetch('data/pres_total.csv')
+            // .then(response => response.text())
+            // .then(text => {
+            //     const parsed = Papa.parse(text, {
+            //         header: true,
+            //         skipEmptyLines: false
+            //     })
+
+            //     const data = parsed.data;
+            //     console.log('data', data);
+
+            //     years = data.map(row => row.report_year);
+            //     expend = data.map(row => parseFloat(row.expenditure_amount));
+
+            //     console.log('years', years);
+            //     console.log('expend', expend);
+            // });
+
+            let years = ['2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023', '2024', '2025'];
+            let expend = [299027.23, 69555086.9, 2980579.07, 3653966.81, 64927114.39, 551611.44, 316524.2, 7991080.36, 120237345.3, 5065363.77, 7792310.39, 101102922.39, 266697671.77, 5434932.44, 6519601.95, 15698102.98, 459988314.32, 50948.44, 547220.3, 156620187.34, 11010567912.67, 1547938.89]
+
+            if (years.length !== expend.length) {
+                console.error('mismatch!');
+                console.error(expend.length);
+                console.error(years.length);
+            }
+
+            const data = {
+                labels: years,
+                datasets: [{
+                    data: expend,
+                    fill: false,
+                    borderColor: 'black',
+                    tension: 0.1
+                }]
+            };
+
+            const stackedLine = new Chart(ctx, {
+                type: 'line',
+                data: data,
+                options: {
+                    scales: {
+                        y: {
+                            stacked: true
+                        }
+                    }
+                }
+            });
+
+        </script>
             <!-- Scripts -->
         <script>
             gsap.registerPlugin(ScrollTrigger);
@@ -411,6 +478,8 @@
                 onEnter: () => {
                     tlt.textillate('in');
                     gsap.fromTo("#section1 .row", { opacity: 0, y: 100 }, { opacity: 1, y: 0, duration: 1, ease: "power2.out" });
+                    // gsap.fromTo("#kennedyImage", {opacity: 0, x: -1000}, {opacity: 1, x: -40, duration: 1, ease: "power2.out"});
+                    // gsap.fromTo("#stevensImage", {opacity: 0, x: 50}, {opacity: 1, x: 50, y:-60, duration: 1, ease: "power2.out"});
                 },
                 onLeave: () => {
                     tlt.textillate('out');
@@ -460,7 +529,7 @@
                     typeSpeed: 30,
                     showCursor: false})
                 },
-            onLeave: () => gsap.fromTo("#section4 .row", { opacity: 1, y: 0 }, { opacity: 0, y: 100, duration: 1, ease: "power2.out" })
+            onLeaveBack: () => gsap.fromTo("#section4 .row", { opacity: 1, y: 0 }, { opacity: 0, y: 100, duration: 1, ease: "power2.out" })
         });
     
 
@@ -486,21 +555,30 @@
                 gsap.fromTo("#section6 .row", { opacity: 0, y: 100 }, { opacity: 1, y: 0, duration: 1, ease: "power2.out" });
                 gsap.fromTo("#kennedyImage", { opacity: 0, x: 1000}, { opacity: 1, x: 0, duration: 1, ease: "power2.out" });
 
+                console.log('flag');
+
                 let typed = new Typed('#decision-title', {
                     strings: ["How exactly was this decided?"],
                     typeSpeed: 35,
                     showCursor: false
                 });
 
+
         },
-            onLeaveBack: () => gsap.fromTo("#section6 .row", { opacity: 1, y: 0}, { opacity: 1, y: 100, duration: 1, ease: "power2.out" })
+            onLeaveBack: () => gsap.fromTo("#section6 .row", { opacity: 1, x: 0}, { opacity: 1, x: -50, duration: 1, ease: "power2.out" })
         });
 
         ScrollTrigger.create({
             trigger: "#section7 .row",
             start: "top 80%",
-            onEnter: () => gsap.fromTo("#section7 .row", { opacity: 0, skewY: 45 }, { opacity: 1, skewY: 0, duration: 1, ease: "power2.out" }),
-            onLeaveBack: () => gsap.fromTo("#section7 .row", { opacity: 1, skewY: 0 }, { opacity: 0, skewY: 45, duration: 1, ease: "power2.out" })
+            onEnter: () => {gsap.fromTo("#section7 .row", { opacity: 0, y: -100}, { opacity: 1, y: 0, duration: 1, ease: "power2.out" });
+                let typed = new Typed('#analysis-one-title', {
+                    strings: ["Independent Expenditures Over Time"],
+                    typeSpeed: 35,
+                    showCursor: false
+                });
+            },
+            onLeaveBack: () => gsap.fromTo("#section7 .row", { opacity: 1, y: 0}, { opacity: 0, y: -100, duration: 1, ease: "power2.out" })
         });
 
         ScrollTrigger.create({
@@ -524,5 +602,7 @@
             onLeaveBack: () => gsap.fromTo("#section10 .row", { opacity: 1, y: 0, rotate: 0 }, { opacity: 0, y: 50, rotate: 20, duration: 1, ease: "power2.out" })
         });
     </script>
+
+    <script src="graph.js"></script>
 </body>
 </html>
