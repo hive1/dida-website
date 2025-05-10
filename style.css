@@ -99,6 +99,6 @@ html, body {
 
 /* i know this messes up my sizing but my charts would shrink into oblivious without it */
 #party, #pac {
-    width: 600px !important;
-    height: 600px !important;
+    /* width: 600px !important; */
+    /* height: 600px !important; */
 }
