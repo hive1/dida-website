@@ -77,7 +77,7 @@ html, body {
 }
 
 #kennedyImage {
-    /* transform: translateY(-49px);     */
+    transform: translateY(-49px);
 }
 
 .party-bar {
@@ -97,6 +97,8 @@ html, body {
     background-color: #bdc3c7;
 }
 
-.tight-row {
-    margin-bottom: 0px;
+/* i know this messes up my sizing but my charts would shrink into oblivious without it */
+#party, #pac {
+    width: 600px !important;
+    height: 600px !important;
 }

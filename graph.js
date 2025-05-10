@@ -41,11 +41,11 @@ const partyData = {
         label: 'Percentage Total Expenditure By Party',
         data: percentages,
         backgroundColor: [
-            '#c9daf8',
-            '#f4cccc',
+            '#6399f7',
+            '#f57a7a',
             '#e8e8e8',
-            '#fffae6',
-            '#ebffde'
+            '#ffe680',
+            '#b3ff80'
         ]
     }]
 };
@@ -56,4 +56,46 @@ new Chart(partyPie, {
 });
 
 
-const topTen = document.getElementById('ten-party-spenders')
+// https://stackoverflow.com/questions/7346563/loading-local-json-file
+// i wanted to at least make the pipeline from data manipulation to js cleaner, so i used this json method
+
+$.getJSON('data/top_15_percentages.json', function(json) {
+    const top15 = document.getElementById('pac');
+
+    let pacs;
+    let percs;
+    let colors;
+
+    pacs = Object.values(json).map(item => item.committee_name);
+    percs = Object.values(json).map(item => item.percentage_exp)
+
+    colors = Object.values(json).map(item => {
+        if (item.candidate_party == 'DEM') return "#6399f7";
+        if (item.candidate_party == 'REP') return "#f57a7a";
+        return '#e8e8e8';
+    })
+
+    const pacData = {
+        labels: pacs,
+        datasets: [{
+            label: 'Percentage Total Expenditure By PACs',
+            data: percs,
+            backgroundColor: colors
+        }]
+    };
+    
+    new Chart(top15, {
+        type: 'pie',
+        data: pacData,
+        options: {
+            plugins: {
+                legend: {
+                    display: false
+                }
+            }
+        }
+    });
+
+});
+
+

@@ -355,21 +355,23 @@
         - top 10 spenders per party (dem and rep) -->
 
         <!-- analysis 2 -->
-        <main class="container-fluid p-0">
+        <main class="container p-0">
             <section id="section8" class="section bg-primary">
                 <div class="container">
                     <div class="row">
                         <h5 id="analysis-title" class="analysis-two-typed"></h5>
                     </div>
                     <div class="row">
-                        <div class="col-md-6 col-lg-6">
+                        <div class="col-md-6 col-lg-6 col-sm-6">
                             <canvas id="party"></canvas>
-                            <canvas id="ten-party-spenders"></canvas>
+                            <p id="analysis-body" class="border rounded p-3 m-2">For the 2024 Presidential Election Cycle, a majority of funding received from Super PACs went to democratic campaigns. Predominantly Kamala Harris, but other candidates received funding as well.</p>
                         </div>
-                        <div class="col-md-5 col-lg-5">
-                            
-                        </div>
+                        
+                        <div class="col-md-6 col-lg-6 col-sm-6">
+                            <canvas id="pac"></canvas>
+                        </div> 
                     </div>
+                    
                 </div>
             </section>
 
@@ -418,7 +420,6 @@
                         onLeaveBack: () => {
                             youtubeVideo.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
                         },
-                        
                     });
                 })
 
@@ -547,7 +548,7 @@
                 gsap.fromTo("#section8 .row", { opacity: 0, x: -100 }, { opacity: 1, x: 0, duration: 1, ease: "power2.out" });
                 
                 let typed = new Typed('.analysis-two-typed', {
-                    strings: ['Percentage Total Expenditure By Party (2024)'],
+                    strings: ['Percentage Total Expenditure By Party and PAC (2024)'],
                     typeSpeed: 35,
                     showCursor: false
                 });
