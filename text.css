@@ -22,7 +22,7 @@
 #general-body {
     font-family: "Open Sans", sans-serif;
     font-size: 30px;
-    font-weight: 250px;
+    font-weight: 250;
 }
 
 
@@ -67,7 +67,10 @@
 #video-explanation-body {
     font-family: "Open Sans", sans-serif;
     font-size: 25px;
-    font-weight: 300;
+    font-weight: 250;
+
+    text-align: center;
+    justify-content: center;
 }
 
 #history-body {
@@ -113,7 +116,7 @@
     border: 1px solid rgb(203, 203, 203);
 }
 
-#analysis-one-title {
+#analysis-title {
     font-family: "Josefin Sans", sans-serif;
     font-size: 50px;
     font-weight: 300;
@@ -126,7 +129,7 @@
     text-align: center;
 }
 
-#analysis-one-body {
+#analysis-body {
     font-family: "Open Sans", sans-serif;
     font-size: 25px;
     font-weight: 250;

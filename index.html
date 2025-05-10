@@ -278,7 +278,7 @@
                     <div class="col-7 card">
                         <h5 class="card-title font-italic p-3 mt-3 " id="videoTitle"></h5>
                         <div id="yt-container" class="text-center">
-                            <iframe id="youtubeVideo" width="800px" height="600px"
+                            <iframe id="youtubeVideo" width="700px" height="500px"
                             src="https://www.youtube.com/embed/BOYcM1z5fTs?autoplay=1&mute=1&enablejsapi=1" 
                             title="Hillary, The Movie" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"></iframe>
                         </div>
@@ -302,15 +302,15 @@
                     <class class="row align-items-center justify-content-center my-5">
                         <h5 id="decision-title"></h5>
                     </class>
-                    <div class="row align-items-center tight-row">
+                    <div class="row align-items-center">
                         <div class="col-md-8 col-lg-8">
-                            <p id="decision-body" class="border rounded p-3">The Supreme Court ruled in <span style="color: #b31942">favor</span> of Citizens United in a 5 to 4 decision, in short agreeing that curtailing their ability to distribute the film Hillary is a violation of their first amendment right. In an opinion written by Justice <span style="color: #0A3161">Kennedy</span>, the Court argued that wealth should not be a delimiting factor to someone’s first amendment right. As such, Citizens United allowed for limitless funding for candidates.</p>
+                            <p id="decision-body" class="border rounded p-3">The Supreme Court ruled in <span style="color: #b31942">favor</span> of Citizens United in a 5 to 4 decision, in short agreeing that curtailing their ability to distribute the film Hillary is a violation of their first amendment right. In an opinion written by <span style="color: #0A3161">Justice Kennedy</span>, the Court argued that wealth should not be a delimiting factor to someone’s first amendment right. As such, Citizens United allowed for limitless funding for candidates.</p>
                         </div>
                         <div class="col-md-4 col-lg-4 d-flex justify-content-center align-items-center">
                             <img src="images/kennedyAgain (1).png" id="kennedyImage" height="500px" width="400px">
                         </div>
                     </div>
-                    <div class="row align-items-center tight-row">
+                    <div class="row align-items-center">
                         <div class="col-md-4 col-lg-4 d-flex justify-content-center align-items-center">
                             <img src="images/stevens.png" id="stevensImage" style="height: 500px; width: 400px;">
                         </div>
@@ -328,30 +328,45 @@
             <section id="section7" class="section bg-primary">
                 <div class="container">
                     <div class="row">
-                        <h5 id="analysis-one-title"></h5>
+                        <h5 id="analysis-title" class="analysis-one-typed"></h5>
                     </div>
                     <div class="row">
                         <div class="col-md-4 col-lg-4">
-                            <p id="analysis-one-body" class="border rounded p-3">For this project, I’ll be using data from the Federal Election Commission and Open Secrets. The FEC, the defendant of the Citizens United case, has been tracking data of elections expenditures and PAC funding since 1992. Data collected and released from groups such as Open Secrets as well can be processed using the Pandas library.
+                            <p id="analysis-body" class="border rounded p-3">Data used in this project is sourced directly from the <a href="fec.gov">FEC's</a> filing database, along with the data analysis group <a href="https://www.opensecrets.org/presidential-elections">OpenSecrets.</a>
+                                The data shows significant increases in independent expenditures, defined as uncoordinated spending by outside groups, in the years following the Citizens United decision. Due to the leniency granted by Citizens United, spending on political campaigns increased significantly.
                             </p>
-                            
                         </div>
-                        <div class="col-md-8 col-lg-8">
+                        <div class="col-md-8 col-lg-8 d-flex flex-column">
                             <canvas id="exp-year"></canvas>
+                            <div class="row align-items-end" class="border rounded p-3">
+                                <div class="col-md-12 col-lg-12">
+                                    <p style="overflow: visible;" class="border round" id="analysis-body">Significant increases occurred post 2012, with significant jumps during the 2016, 2020, and 2024 elections.
+                                    2016 recorded about 266 million dollars in independent expenditure, 2020 about 500 million, and a little over 1 billion for the most recent election.    
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
 
+        <!-- two analysis:
+        - party independent expenditure 2024
+        - top 10 spenders per party (dem and rep) -->
 
         <!-- analysis 2 -->
         <main class="container-fluid p-0">
             <section id="section8" class="section bg-primary">
                 <div class="container">
-                    <div class="row justify-content-center">
-                        <div class="col-md-8 col-lg-6 text-center">
-                            <div class="title"><span class="material-icons">home</span>section 8</div>
-                            <p class="paragraph">ANALYSIS 2</p>
+                    <div class="row">
+                        <h5 id="analysis-title" class="analysis-two-typed"></h5>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-5 col-lg-5">
+                            <canvas id="party"></canvas>
+                        </div>
+                        <div class="col-md-5 col-lg-5">
+                            <canvas id="ten-party-spenders"></canvas>
                         </div>
                     </div>
                 </div>
@@ -408,63 +423,7 @@
 
         </script>
 
-
-        <script>
-            const ctx = document.getElementById('exp-year');
-            // let years;
-            // let expend;
-
-            // fetch('data/pres_total.csv')
-            // .then(response => response.text())
-            // .then(text => {
-            //     const parsed = Papa.parse(text, {
-            //         header: true,
-            //         skipEmptyLines: false
-            //     })
-
-            //     const data = parsed.data;
-            //     console.log('data', data);
-
-            //     years = data.map(row => row.report_year);
-            //     expend = data.map(row => parseFloat(row.expenditure_amount));
-
-            //     console.log('years', years);
-            //     console.log('expend', expend);
-            // });
-
-            let years = ['2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023', '2024', '2025'];
-            let expend = [299027.23, 69555086.9, 2980579.07, 3653966.81, 64927114.39, 551611.44, 316524.2, 7991080.36, 120237345.3, 5065363.77, 7792310.39, 101102922.39, 266697671.77, 5434932.44, 6519601.95, 15698102.98, 459988314.32, 50948.44, 547220.3, 156620187.34, 11010567912.67, 1547938.89]
-
-            if (years.length !== expend.length) {
-                console.error('mismatch!');
-                console.error(expend.length);
-                console.error(years.length);
-            }
-
-            const data = {
-                labels: years,
-                datasets: [{
-                    data: expend,
-                    fill: false,
-                    borderColor: 'black',
-                    tension: 0.1
-                }]
-            };
-
-            const stackedLine = new Chart(ctx, {
-                type: 'line',
-                data: data,
-                options: {
-                    scales: {
-                        y: {
-                            stacked: true
-                        }
-                    }
-                }
-            });
-
-        </script>
-            <!-- Scripts -->
+        <!-- Scripts -->
         <script>
             gsap.registerPlugin(ScrollTrigger);
 
@@ -478,8 +437,6 @@
                 onEnter: () => {
                     tlt.textillate('in');
                     gsap.fromTo("#section1 .row", { opacity: 0, y: 100 }, { opacity: 1, y: 0, duration: 1, ease: "power2.out" });
-                    // gsap.fromTo("#kennedyImage", {opacity: 0, x: -1000}, {opacity: 1, x: -40, duration: 1, ease: "power2.out"});
-                    // gsap.fromTo("#stevensImage", {opacity: 0, x: 50}, {opacity: 1, x: 50, y:-60, duration: 1, ease: "power2.out"});
                 },
                 onLeave: () => {
                     tlt.textillate('out');
@@ -572,7 +529,8 @@
             trigger: "#section7 .row",
             start: "top 80%",
             onEnter: () => {gsap.fromTo("#section7 .row", { opacity: 0, y: -100}, { opacity: 1, y: 0, duration: 1, ease: "power2.out" });
-                let typed = new Typed('#analysis-one-title', {
+                
+                let typed = new Typed('.analysis-one-typed', {
                     strings: ["Independent Expenditures Over Time"],
                     typeSpeed: 35,
                     showCursor: false
@@ -584,8 +542,16 @@
         ScrollTrigger.create({
             trigger: "#section8 .row",
             start: "top 80%",
-            onEnter: () => gsap.fromTo("#section8 .row", { opacity: 0, y: -100 }, { opacity: 1, y: 0, duration: 1, ease: "power2.out" }),
-            onLeaveBack: () => gsap.fromTo("#section8 .row", { opacity: 1, y: 0 }, { opacity: 0, y: -100, duration: 1, ease: "power2.out" })
+            onEnter: () => {
+                gsap.fromTo("#section8 .row", { opacity: 0, x: -100 }, { opacity: 1, x: 0, duration: 1, ease: "power2.out" });
+                
+                let typed = new Typed('.analysis-two-typed', {
+                    strings: ['Percentage Total Expenditure By Party (2024)'],
+                    typeSpeed: 35,
+                    showCursor: false
+                });
+            },
+            onLeaveBack: () => gsap.fromTo("#section8 .row", { opacity: 1, x: 0 }, { opacity: 0, x: -100, duration: 1, ease: "power2.out" })
         });
 
         ScrollTrigger.create({
