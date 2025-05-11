@@ -125,3 +125,12 @@ html, body {
     transform: scale(1.1);
     transition: all 0.5s;
 }
+
+#history-card {
+    transition: 0.5s;
+}
+
+#history-card:hover {
+    transform: scale(1.1);
+    transition: all 0.5s;
+}
