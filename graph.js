@@ -12,7 +12,6 @@ const data = {
     }]
 };
 
-// i used this to help with the annotations: https://www.geeksforgeeks.org/how-to-draw-a-vertical-line-at-a-particular-point-on-the-x-axis-using-chart-js/
 const stackedLine = new Chart(ctx, {
     type: 'line',
     data: data,

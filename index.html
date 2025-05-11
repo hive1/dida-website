@@ -31,6 +31,9 @@
     <!-- video api -->
     <script src="https://www.youtube.com/iframe_api"></script>
 
+    <!-- animating the split thing in decision -->
+    <script src="https://cdn.jsdelivr.net/npm/animejs/lib/anime.iife.min.js"></script>
+
     <!-- open sans google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -41,8 +44,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet"/>
 </head>
 
-<!-- for the nav bar, i want to put a progress bar underlying it and then proper spacing between elements -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+
+<body data-bs-spy="scroll" data-bs-target=".navbar" dark-bs-offset="50">
     <nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container-fluid">
             <a  class="navbar-brand" href="#"></a>
@@ -60,11 +64,12 @@
             .navbar-toggler {
                 z-index: 999;
             }
-
         </style>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+
+            <button class="navbar-toggler" type="button" data-  bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
+
             <div class="collapse navbar-collapse" id="navbarNav">
                 <div class="w-100 d-flex justify-content-center">
                     <ul class="navbar-nav d-flex gap-3">
@@ -300,24 +305,28 @@
         <main class="container-fluid p-0">
             <section id="section6" class="section bg-primary">
                 <div class="container">
-                    <class class="row align-items-center justify-content-center my-4">
+                    <div class="row align-items-center justify-content-center my-4">
                         <h5 id="decision-title"></h5>
-                    </class>
+                    </div>
                     <div class="row align-items-center">
                         <div class="col-md-8 col-lg-8">
-                            <p id="decision-body" class="border rounded">The Supreme Court ruled in <span style="color: #b31942">favor</span> of Citizens United in a 5 to 4 decision, in short agreeing that curtailing their ability to distribute the film Hillary is a violation of their first amendment right. In an opinion written by <span style="color: #0A3161">Justice Kennedy</span>, the Court argued that wealth should not be a delimiting factor to someone’s first amendment right. As such, Citizens United allowed for limitless funding for candidates.</p>
+                            <p id="decision-body" class="border rounded p-3"><img src="images/icons/gavel2.png" id="icon" alt="gavel">The Supreme Court ruled in <span style="color: #b31942">favor</span> of Citizens United in a 5 to 4 decision, in short agreeing that curtailing their 
+                                ability to distribute the film Hillary is a violation of their first amendment right. In an opinion written by <span style="color: #0A3161">Justice Kennedy</span>, the Court argued that wealth should not be a delimiting factor to someone’s first amendment right. As such, Citizens United allowed for limitless funding for candidates.</p>
                         </div>
                         <div class="col-md-4 col-lg-4 d-flex justify-content-center align-items-center">
                             <img src="images/kennedyAgain (1).png" id="kennedyImage" height="500px" width="400px">
                         </div>
-                    </div>
+
                     <div class="row align-items-center">
                         <div class="col-md-4 col-lg-4 d-flex justify-content-center align-items-center">
                             <img src="images/stevens.png" id="stevensImage" style="height: 500px; width: 400px;">
                         </div>
                         <div class="col-md-8 col-lg-8 d-flex justify-content-center align-items-center">
-                            <p id="decision-body" class="border rounded p-3" style="background-image: url('images/fec_edited\ \(1\).png');"><span style="color: #B31942">Justice Stevens</span> wrote a particularly lengthy dissent regarding potentially corrupting nature of this decision. Unlimited spending in political campaigns can lead to expanded influence by corporate entities and mitigation of the influence of any common man.</p>
+                            <p id="decision-body" class="border rounded p-3" style="background-image: url('images/fec_edited\ \(1\).png');">
+                                <img src="images/icons/thumbsDown.png" alt="thumbs down" id="icon"><span style="color: #B31942">Justice Stevens</span> wrote a particularly lengthy dissent regarding potentially corrupting nature of this decision. Unlimited spending in political campaigns 
+                                can lead to expanded influence by corporate entities and mitigation of the influence of any common man.</p>
                         </div>
+                    </div>
                     </div>
                 </div>
             </section>
@@ -344,7 +353,7 @@
                             <canvas id="exp-year"></canvas>
                             <div class="row align-items-end" class="border rounded p-3">
                                 <div class="col-md-12 col-lg-12">
-                                    <p style="overflow: visible;" class="border round" id="analysis-body">Significant increases occurred post 2012, with significant jumps during the 2016, 2020, and 2024 elections.
+                                    <p style="overflow: visible;" class="border rounded p-3" id="analysis-body">Significant increases occurred post 2012, with significant jumps during the 2016, 2020, and 2024 elections.
                                     2016 recorded about 266 million dollars in independent expenditure, 2020 about 500 million, and a little over 1 billion for the most recent election.    
                                     </p>
                                 </div>
@@ -368,12 +377,12 @@
                     <div class="row">
                         <div class="col-md-6 col-lg-6 col-sm-6">
                             <canvas id="party"></canvas>
-                            <p id="analysis-body" class="border rounded p-3 m-2">For the 2024 Presidential Election Cycle, a majority of funding received from Super PACs went to democratic campaigns. Predominantly Kamala Harris, but other candidates received funding as well.</p>
+                            <p id="analysis-body" class="border rounded p-3 m-2"><img src="images/icons/money.png" id="icon" alt="money">For the 2024 Presidential Election Cycle, a majority of funding received from Super PACs went to democratic campaigns. Predominantly Kamala Harris, but other candidates received funding as well.</p>
                         </div>
                         
                         <div class="col-md-6 col-lg-6 col-sm-6">
                             <canvas id="pac"></canvas>
-                            <p id="analysis-body" class="border rounded p-3 m-2">Representative of the Top 15 biggest contributions by PACs during the 2024 election. The Democratic-Aligned Future Forward (FF) Super PAC donated around 48.11% of the total independent expenditure filed during the election.</p>
+                            <p id="analysis-body" class="border rounded p-3 m-2"><img src="images/icons/money.png" id="icon" alt="money">Representative of the Top 15 biggest contributions by PACs during the 2024 election. The Democratic-Aligned Future Forward (FF) Super PAC donated around 48.11% of the total independent expenditure filed during the election.</p>
                         </div> 
                     </div>
                     
@@ -382,22 +391,55 @@
 
         <!-- moving forward -->
         <main class="container-fluid p-0">
-            <section id="section9" class="section section bg-primary">
+            <section id="section9" class="section bg-primary">
                 <div class="container">
                     <div class="row justify-content-center">
-                        <div class="col-md-8 col-lg-6 text-center">
-                            <div class="title"><span class="material-icons">home</span> Section 9</div>
-                            <p class="paragraph">moving forward</p>
+                        <div class="col-md-8 col-lg-8 text-center">
+                            <h5 id="conc-title" class="border rounded p-3"></h5>
                         </div>
+                    </div>
+
+                    <!-- this will be negative opinions -->
+                    <div class="row">
+                        <div class="col-md-6 col-lg-6">
+                            <p id="conc-body" class="border rounded p-3" style="border-color: #f57a7a !important;">“No sufficient governmental interest justifies limits on the political speech of nonprofit 
+                                or for-profit corporations.” - <a href="https://constitutioncenter.org/the-constitution/supreme-court-case-library/citizens-united-v-fec">Justice Anthony Kennedy</a></p>
+                            <p id="conc-body" class="border rounded p-3" style="border-color: #f57a7a !important;">“For too long, some in this country have been deprived of full participation in the political process. Today’s decision is a victory for the First Amendment and the right to speak freely about the government.” - 
+                                <a href="https://endcitizensunited.org/latest-news/press-releases/timeline-of-senator-mitch-mcconnells-hypocrisy-on-corporate-americas-role-in-politics/">Senator Mitch McConnell</a></p>
+                            <p id="conc-body" class="border rounded p-3" style="border-color: #f57a7a !important;">“I think Thomas Jefferson would have said, ‘The more speech, the better.’ That's what the First Amendment is all about, so long as the people know where the speech is coming from.” - 
+                                <a href="https://www.theatlantic.com/politics/archive/2012/07/scalia-defends-citizens-united-decision-reflects-on-term-in-rare-tv-appearance/437268/">Justice Antonin Scalia</a></p>
+                        </div>
+                        <div class="col-md-6 col-lg-6">
+                            <p id="conc-body" class="border rounded p-3" style="border-color: #6399f7 !important;">"A democracy cannot function effectively when its constituent members believe laws are being brought and sold" - <a href="https://constitutioncenter.org/the-constitution/supreme-court-case-library/citizens-united-v-fec">Justice John Stevens</a></p>
+                            <p id="conc-body" class="border rounded p-3" style="border-color: #6399f7 !important;">"With all due deference to separation of powers, last week the Supreme Court reversed a century of law that I believe will open the floodgates for special interests — including foreign corporations — to spend without limit in our elections." - <a href="https://obamawhitehouse.archives.gov/the-press-office/remarks-president-state-union-address">Former President Barack Obama</a></p>
+                            <p id="conc-body" class="border rounded p-3" style="border-color: #6399f7 !important;">"Democrats often talk about the need to end Citizens United, and we agree. They talk about moving to public funding of elections. But if you’re serious about the power of money in politics, you can say today, sorry, no super PACs allowed in primaries." - <a href="https://truthout.org/articles/in-dnc-speech-sanders-says-overturning-citizens-united-should-be-a-priority/">Senator Bernie Sanders</a></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <p id="conc-body" class="border rounded p-3 justify-content-center"><img src="images/icons/caution.png" id="icon" alt="caution!">There are a lot of competing opinions on the merits of the Citizens United decision.
+                            Despite the decision having bipartisan influences, it is heavily contested between the two dominant American parties. However, the influence of corporate spending through
+                            Super PAC independent expenditure is undeniable. This decision effectively allows for some Americans to have an outsized political influence on the legislative process, allowing
+                            for some interests to be emphasized over others. As such, it is crucial for Americans to wake up and advocate against this decision, as it effectively undermines their voice from above them.
+                        </p>
+                    </div>
+
+                    <!-- return to top button -->
+                    <div class="row align-items-center">
+                        <button title="Reread" id="reread">Reread</button>    
                     </div>
                 </div>
             </section>
 
         <script>
+                document.getElementById('reread').onclick = function () {
+                    const top = document.getElementById('section2');
+                    top.scrollIntoView({behavior: "smooth"})
+                }
+
                 document.addEventListener("DOMContentLoaded", (event) => {
                     const youtubeVideo = document.getElementById("youtubeVideo");
                     ScrollTrigger.create({
-                        trigger: ".yt-container",
+                        trigger: "#yt-container",
                         start: "top center",
                         end: "bottom center",
                         onEnter: () => {
@@ -419,32 +461,11 @@
 
         <!-- Scripts -->
         <script>
-            gsap.registerPlugin(ScrollTrigger);
+        gsap.registerPlugin(ScrollTrigger);
 
-            // textillate setup
-            let tlt = $('.tlt');
-            tlt.textillate({ in: { effect: 'lightSpeedIn' },out: { effect: 'fadeOutDown' }, autoStart: false });
-
-            ScrollTrigger.create({
-                trigger: "#section1 .row",
-                start: "top 80%",
-                onEnter: () => {
-                    tlt.textillate('in');
-                    gsap.fromTo("#section1 .row", { opacity: 0, y: 100 }, { opacity: 1, y: 0, duration: 1, ease: "power2.out" });
-                },
-                onLeave: () => {
-                    tlt.textillate('out');
-                    gsap.fromTo("#section1 .row", { opacity: 1, y: 0 }, { opacity: 0, y: 100, duration: 1, ease: "power2.out" });
-                },
-                onEnterBack: () => {
-                    tlt.textillate('in');
-                    gsap.fromTo("#section1 .row", { opacity: 0, y: 100 }, { opacity: 1, y: 0, duration: 1, ease: "power2.out" });
-                },
-            onLeaveBack: () => {
-                tlt.textillate('out');
-                gsap.fromTo("#section1 .row", { opacity: 1, y: 0 }, { opacity: 0, y: 100, duration: 1, ease: "power2.out" });
-            }
-        });
+        // textillate setup
+        let tlt = $('.tlt');
+        tlt.textillate({ in: { effect: 'lightSpeedIn' },out: { effect: 'fadeOutDown' }, autoStart: false });
 
         ScrollTrigger.create({
             trigger: "#section2 .row",
@@ -507,6 +528,7 @@
             onEnter: () => {
                 gsap.fromTo("#section6 .row", { opacity: 0, y: 100 }, { opacity: 1, y: 0, duration: 1, ease: "power2.out" });
                 gsap.fromTo("#kennedyImage", { opacity: 0, x: 1000}, { opacity: 1, x: 0, duration: 1, ease: "power2.out" });
+                gsap.fromTo("#stevensImage", { opacity: 0, x: -1000}, { opacity: 1, x: 0, duration: 1, ease: "power2.out" });
 
                 console.log('flag');
 
@@ -553,8 +575,16 @@
         ScrollTrigger.create({
             trigger: "#section9 .row",
             start: "top 80%",
-            onEnter: () => gsap.fromTo("#section9 .row", { opacity: 0, scale: 2 }, { opacity: 1, scale: 1, duration: 1, ease: "power2.out" }),
-            onLeaveBack: () => gsap.fromTo("#section9 .row", { opacity: 1, scale: 1 }, { opacity: 0, scale: 2, duration: 1, ease: "power2.out" })
+            onEnter: () => {
+                gsap.fromTo("#section9 .row", { opacity: 0, y: -100 }, { opacity: 1, y: 0, ease: "power2.out" });
+                
+                let typed = new Typed('#conc-title', {
+                    strings: ['So what does this mean moving forward?'],
+                    typeSpeed: 35,
+                    showCursor: false
+                })
+            },
+            onLeaveBack: () => gsap.fromTo("#section9 .row", { opacity: 1, y: 0}, { opacity: 0, y: -100, ease: "power2.out" })
         });
     </script>
 

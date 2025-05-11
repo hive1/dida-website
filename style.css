@@ -29,15 +29,16 @@ html, body {
 
 
 #section2 {
-    background-color: #f5ffff !important;
-}
-
-#section3 {
     background-color: #f7fcfc !important;
 }
 
-#section4 {
+#section3 {
+    
     background-color: #f5ffff !important;
+}
+
+#section4 {
+    background-color: #f7fcfc !important;
     background-image: url("images/hillary_edited.png"),
                       linear-gradient(rgba(245, 255, 255, 0.7), rgba(245, 255, 255, 0.7));
     background-repeat: no-repeat;
@@ -46,27 +47,29 @@ html, body {
 }
 
 #section5 {
-    background-color: #f7fcfc !important;
+    background-color: #f5ffff !important;
 }
 
 #section6 {
-    background-color: #f5ffff !important;
+    background-color: #f7fcfc !important;
 }
 
 #section7 {
-    background-color: #f7fcfc !important;
+    background-color: #f5ffff !important;
 }
 
 #section8 {
-    background-color: #f5ffff !important;
+    background-color: #f7fcfc !important;
+    
 }
 
 #section9 {
-    background-color: #f7fcfc !important;
-}
-
-#section10 {
     background-color: #f5ffff !important;
+
+    background-image: url("images/scaleEdited2.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
 }
 
 #sc_image {
@@ -101,6 +104,24 @@ html, body {
     height: 30px;
     width: 30px;
 
-    margin-bottom: 5px;
-    margin-left: 5px;
+    margin: 7px;
+}
+
+#reread {
+    background-color: #f7fcfc;
+    margin-bottom: 20px;
+
+    height: 40px;
+
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+
+    transition: all 0.5s;
+
+    font-family: "Josefin Sans", sans-serif;
+}
+
+#reread:hover {
+    transform: scale(1.1);
+    transition: all 0.5s;
 }

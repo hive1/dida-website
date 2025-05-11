@@ -82,7 +82,7 @@
 #decision-body {
     font-family: "Open Sans", sans-serif;
     font-size: 25px;
-    font-weight: 300;
+    font-weight: 250;
 
     padding: 3px; 
     overflow-wrap: break-word;
@@ -134,4 +134,26 @@
     padding: 3px; 
     overflow-wrap: break-word;
     background-color: #ffffff;
+}
+
+#conc-title {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 40px;
+    font-weight: 300;
+
+    padding: 10px 20px;
+
+    background-color: #ffffff;
+    border: 1px solid rgb(203, 203, 203);
+}
+
+#conc-body {
+    font-family: "Open Sans", sans-serif;
+    font-size: 25px;
+    font-weight: 275;
+
+    overflow-wrap: break-word;
+    background-color: #ffffff; 
+
+    margin-top: 3px;
 }
